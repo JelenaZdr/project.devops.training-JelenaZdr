@@ -23,3 +23,8 @@ blocks:
       prologue:
         commands:
           - checkout
+promotions:
+  - name: Deploy
+    pipeline_file: pipeline_3.yml
+    auto_promote:
+      when: branch = 'main' AND result = 'passed'
