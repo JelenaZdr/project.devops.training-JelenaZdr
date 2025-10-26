@@ -14,7 +14,7 @@ blocks:
       jobs:
         - name: Deploy
           commands:
-            - cd deploy/
+            - cd examples/
             - kubectl create namespace "jelena-zdr" || true
             - kubectl config set-context --current --namespace="jelena-zdr"
             - kubectl apply -f deployment.yml
